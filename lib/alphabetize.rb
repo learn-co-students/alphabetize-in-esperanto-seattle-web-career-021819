@@ -1,3 +1,9 @@
+esp_alph = " abcĉdefgĝhĥijĵklmnoprsŝtuŭvz"
 def alphabetize(arr)
-  # code here
+  esp_alph = " abcĉdefgĝhĥijĵklmnoprsŝtuŭvz"
+  arr.sort_by do |sentence|
+    sentence.split("").map do |character|
+      esp_alph.index(character)
+    end
+  end
 end
